@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HazemTech 365 | FlexiWeb</title>
+  <style>
+    body {
+      background-color: #0a0a0f;
+      color: #00ffcc;
+      font-family: "Consolas", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    h1 {
+      color: #00ffee;
+      text-shadow: 0 0 8px #00ffee;
+      font-size: 2em;
+    }
+    .boot-text {
+      font-size: 1em;
+      margin: 8px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hidden { display: none; }
+    .links a {
+      color: #00ffcc;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 16px;
+      border: 1px solid #00ffcc;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    .links a:hover {
+      background-color: #00ffcc;
+      color: #0a0a0f;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+  </style>
+</head>
+<body>
+  <div id="boot">
+    <p class="boot-text" style="animation-delay:0s;">Booting FlexiWeb v1.0...</p>
+    <p class="boot-text" style="animation-delay:1s;">Initializing HazemTech modules...</p>
+    <p class="boot-text" style="animation-delay:2s;">✓ Wi-Fi Analyzer</p>
+    <p class="boot-text" style="animation-delay:2.5s;">✓ Text Media Player</p>
+    <p class="boot-text" style="animation-delay:3s;">✓ FlexiOS</p>
+    <p class="boot-text" style="animation-delay:3.5s;">✓ FlexiTool</p>
+    <p class="boot-text" style="animation-delay:4.5s;">System ready.</p>
+    <p class="boot-text" style="animation-delay:5s;">Launching main interface...</p>
+  </div>
+
+  <div id="main" class="hidden">
+    <h1>💻 Welcome to HazemTech 365</h1>
+    <p>The official hub of creativity, automation, and pure tech chaos 😎</p>
+    <div class="links">
+      <a href="#">Wi-Fi Strength Analyzer</a>
+      <a href="#">Text Media Player V1</a>
+      <a href="#">FlexiOS Concept</a>
+      <a href="#">FlexiTool</a>
+      <a href="#">About Me</a>
+    </div>
+    <p style="margin-top: 20px; font-size: 0.9em; color: #aaa;">
+      Powered by curiosity, caffeine ☕, and endless innovation.
+    </p>
+  </div>
+
+  <script>
+    const boot = document.getElementById('boot');
+    const main = document.getElementById('main');
+    setTimeout(() => {
+      boot.classList.add('hidden');
+      main.classList.remove('hidden');
+    }, 6000);
+  </script>
+</body>
+</html>
